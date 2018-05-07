@@ -165,12 +165,10 @@
                 </svg>
             </div>
             <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-                <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-                    <use xlink:href="#chart"/>
-                </svg>
-                <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-                    <use xlink:href="#chart"/>
-                </svg>
+                <canvas id="myChart"></canvas>
+                <!--<svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">-->
+                <!--<use xlink:href="#chart"/>-->
+                <!--</svg>-->
             </div>
             <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
                 <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
@@ -235,7 +233,7 @@
         </mask>
         <g id="piechart">
             <circle cx=0.5 cy=0.5 r=0.5/>
-            <path d="M 0.5 0.5 0.5 0 A 0.5 0.5 0 0 1 0.95 0.28 z" stroke="none" fill="rgba(255, 255, 255, 0.75)"/>
+                <path d="M 0.5 0.5 0.5 0 A 0.5 0.5 0 0 1 0.95 0.28 z" stroke="none" fill="rgba(255, 255, 255, 0.75)"/>
         </g>
     </defs>
 </svg>
@@ -297,7 +295,60 @@
 </body>
 </html>
 
-<script src="https://cdnjs.com/libraries/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
 <script type="text/javascript">
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'A',
+                data: [],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 0.2)',
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Chart.js Line Chart'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Month'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            }
+        }
+    });
 
+    setInterval(function () {
+        myChart.data.labels.push(moment().format('HH:mm:ss'));
+        myChart.data.datasets.forEach(function (dataset) {
+            dataset.data.push(Math.random());
+        })
+        myChart.update();
+    },1000);
 </script>
