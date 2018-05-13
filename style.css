@@ -1,3 +1,8 @@
+a.logo {
+    text-decoration: none;
+    cursor: default;
+}
+
 div.rawInfo {
     margin-left: 2.5%;
 }
@@ -76,7 +81,7 @@ span.bootstrap-switch-handle-off {
     font-weight: 700;
 }
 
-div.totPrice{
+div.totPrice {
     text-align: right;
     margin-right: 2.5%;
 }
