@@ -1,178 +1,389 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Room Management Platform</title>
+    <title>Editorial by HTML5 UP</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    <link rel="stylesheet" href="style.css">
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
-    <link rel="shortcut icon" href="images/favicon.png">
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        #view-source {
-            position: fixed;
-            display: block;
-            right: 0;
-            bottom: 0;
-            margin-right: 40px;
-            margin-bottom: 40px;
-            z-index: 900;
-        }
-    </style>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
 </head>
 <body>
-<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-    <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
-        <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">Home</span>
-            <div class="mdl-layout-spacer"></div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-                    <i class="material-icons">search</i>
-                </label>
-                <div class="mdl-textfield__expandable-holder">
-                    <input class="mdl-textfield__input" type="text" id="search">
-                    <label class="mdl-textfield__label" for="search">Enter your query...</label>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a class="logo">Everything is just purposed to <strong>SUBVERT</strong> the air-conditioning experience</a>
+                <ul class="icons">
+                    <li><a style="cursor:pointer" class="icon fa-twitter" title="Go to Nowhere"><span class="label">Twitter</span></a>
+                    </li>
+                    <li><a style="cursor:pointer" class="icon fa-facebook" title="Go to Nowhere"><span class="label">Facebook</span></a>
+                    </li>
+                    <li><a style="cursor:pointer" class="icon fa-instagram" title="Go to Nowhere"><span class="label">Instagram</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <div class="rawInfo box" align="center">
+                    <div id="cost">
+                        <h1 class="rawInfo">100</h1>
+                        <p class="rawInfoInfo">Cost</p>
+                    </div>
                 </div>
+                <div class="rawInfo box" align="center">
+                    <div id="currentTemp">
+                        <h1 class="rawInfo">25°C</h1>
+                        <p class="rawInfoInfo">Temperature</p>
+                    </div>
+                </div>
+
+                <div class="small-gap"></div>
+
+                <table class="ctrlPad">
+                    <tr>
+                        <td>
+                            <h3 class="ctrlName">Power</h3>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="acPower">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="ctrlName">Temperature</h3>
+                        </td>
+                        <td>
+                            <input id="acTemp">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="ctrlName">Fan Speed</h3>
+                        </td>
+                        <td>
+                            <div class="fanCtrl">
+                                <input type="radio" id="demo-priority-low" name="demo-priority" data-gear="Low" checked>
+                                <label for="demo-priority-low">Low</label>
+                                <input type="radio" id="demo-priority-normal" name="demo-priority" data-gear="Normal">
+                                <label for="demo-priority-normal">Normal</label>
+                                <input type="radio" id="demo-priority-high" name="demo-priority" data-gear="High">
+                                <label for="demo-priority-high">High</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="ctrlName">Mode</h3>
+                        </td>
+                        <td>
+                            <h3 id="mode" class="ctrlName">cool</h3>
+                        </td>
+                    </tr>
+                </table>
+
+            </section>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Statics</h2>
+                </header>
+                <div class="features">
+                    <canvas id="chart"></canvas>
+                </div>
+            </section>
+
+            <div class="checkout">
+                <a class="button checkoutBtn" id="checkoutBtn">
+                    <span class="glyphicon glyphicon-log-out"></span>
+                    Checkout
+                </a>
             </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
-                <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-                <li class="mdl-menu__item">About</li>
-                <li class="mdl-menu__item">Contact</li>
-                <li class="mdl-menu__item">Legal information</li>
-            </ul>
+
         </div>
-    </header>
-    <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-            <p class="welcome_word">Welcome<br>No.123 Room Guest</p>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">home</i>Home</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">inbox</i>Inbox</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">delete</i>Trash</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">report</i>Spam</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">forum</i>Forums</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">flag</i>Updates</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">local_offer</i>Promos</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">shopping_cart</i>Purchases</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">people</i>Social</a>
-            <div class="mdl-layout-spacer"></div>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
-        </nav>
     </div>
-    <main class="mdl-layout__content mdl-color--grey-100">
-        <div class="mdl-grid demo-content">
-            <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-                <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1"
-                     class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-                    <use xlink:href="#piechart" mask="url(#piemask)"/>
-                    <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle"
-                          dy="0.1">82
-                        <tspan font-size="0.2" dy="-0.07">%</tspan>
-                    </text>
-                </svg>
-                <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1"
-                     class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-                    <use xlink:href="#piechart" mask="url(#piemask)"/>
-                    <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle"
-                          dy="0.1">82
-                        <tspan dy="-0.07" font-size="0.2">%</tspan>
-                    </text>
-                </svg>
-                <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1"
-                     class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-                    <use xlink:href="#piechart" mask="url(#piemask)"/>
-                    <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle"
-                          dy="0.1">82
-                        <tspan dy="-0.07" font-size="0.2">%</tspan>
-                    </text>
-                </svg>
-                <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1"
-                     class="demo-chart mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-                    <use xlink:href="#piechart" mask="url(#piemask)"/>
-                    <text x="0.5" y="0.5" font-family="Roboto" font-size="0.3" fill="#888" text-anchor="middle"
-                          dy="0.1">82
-                        <tspan dy="-0.07" font-size="0.2">%</tspan>
-                    </text>
-                </svg>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <div class="welcome" align="center">
+                <h1>Welcome! Room 111 Guest</h1>
             </div>
-            <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-                <canvas id="myChart"></canvas>
-            </div>
-            <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-                <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-                    <!--<div class="mdl-card__title mdl-card&#45;&#45;expand mdl-color&#45;&#45;teal-300">-->
-                        <!--<h2 class="mdl-card__title-text">Updates</h2>-->
-                    <!--</div>-->
-                    <!--<div class="mdl-card__supporting-text mdl-color-text&#45;&#45;grey-600">-->
-                        <!--Non dolore elit adipisicing ea reprehenderit consectetur culpa.-->
-                    <!--</div>-->
-                    <!--<div class="mdl-card__actions mdl-card&#45;&#45;border">-->
-                        <!--<a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>-->
-                    <!--</div>-->
+
+            <section>
+                <header class="major">
+                    <h2>About Us</h2>
+                </header>
+                <div align="left">
+                    <p>The section that you are reading is supposed to display some hotel information. But, as known to
+                        all, this hotel thing does not exist,
+                        <del>and I hope this assignment does not exist as well</del>
+                        , so you have just wasted several minutes to read this piece of shit.
+                        <br><br>
+                        HAVE A NICE DAY.
+                    </p>
                 </div>
-            </div>
+            </section>
+
+            <section>
+                <header class="major">
+                    <h2>Get in touch</h2>
+                </header>
+                <p>This is my personal number and e-mail to contact. Meaningless but looks like more official.</p>
+                <ul class="contact">
+                    <li class="fa-envelope-o"><a href="#">hanxiang.huang@qq.com</a></li>
+                    <li class="fa-phone">18916887007</li>
+                </ul>
+            </section>
+
+            <footer id="footer">
+                <p class="copyright">&copy; Hanxiang Huang.<br> All rights reserved.</p>
+            </footer>
         </div>
-    </main>
+    </div>
+
 </div>
-<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/css/bootstrap3/bootstrap-switch.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/css/bootstrap-slider.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/bootstrap-slider.js"></script>
+
 </body>
 </html>
 
+<script type="text/javascript">
+    $("#acPower").bootstrapSwitch({
+        onText: 'On',
+        offText: 'Off'
+    });
+
+    $('#acTemp').bootstrapSlider({
+        id: 'acTempSlider',
+        min: 16,
+        max: 32,
+        value: 26,
+        tooltip: 'show',
+        formatter: function (value) {
+            return value + '°C';
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    function getAcOptions() {
+        let pwd = $("#acPower").data('bootstrap-switch').options.state;
+        let temp = $('#acTemp').bootstrapSlider('getValue');
+        let fanSpd = $("input[type='radio']:checked").data('gear');
+
+        return {
+            type: 0,
+            room: undefined,
+            switch: pwd,
+            temperature: temp,
+            wind: fanSpd
+        };
+    }
+
+    $("#acPower").on('switchChange.bootstrapSwitch', function () {
+        let tmpStr = JSON.stringify(getAcOptions());
+        alert(tmpStr);
+    });
+
+    $("#acTemp").on('slideStop', function () {
+        let tmpStr = JSON.stringify(getAcOptions());
+        alert(tmpStr);
+    });
+
+    $("input[type='radio']").change(function () {
+        let tmpStr = JSON.stringify(getAcOptions());
+        alert(tmpStr);
+    })
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
-<script src="./lib/index.js"></script>
+
+<script type="text/javascript">
+    let ctx = document.getElementById("chart").getContext('2d');
+
+    let chartInitParam = {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: '',
+                data: [],
+                backgroundColor: 'rgba(220, 220, 220, 0.5)',
+                borderColor: '#f56a6a',
+                fill: true,
+//                lineTension:0
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Temperature Tendency Chart',
+                fontSize: 20
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Time / HH:mm:ss'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Temperature / °C'
+                    }
+                }]
+            }
+        }
+    };
+
+    let myChart = new Chart(ctx, chartInitParam);
+
+    //        setInterval(function () {
+    //            myChart.data.labels.push(moment().format('HH:mm:ss'));
+    //            myChart.data.datasets.forEach(function (dataset) {
+    //                dataset.data.push(Math.random()*16+16);
+    //            });
+    //            myChart.update();
+    //        }, 1000);
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.33.5/css/bootstrap-dialog.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.33.5/js/bootstrap-dialog.min.js"></script>
+
+<script type="text/javascript">
+    $("a#checkoutBtn").click(function () {
+        /************
+         * json with two key
+         *      history <list>: event and its timestamp
+         *      cost <float>: cost
+         *
+         * TODO
+         ************/
+
+        let checkOutInfo = {
+            history: [
+                {
+                    event: 'A',
+                    timestamp: 1514739661
+                },
+                {
+                    event: 'B',
+                    timestamp: 1514743261
+                },
+                {
+                    event: 'C',
+                    timestamp: 1514743321
+                },
+                {
+                    event: 'B',
+                    timestamp: 1514916121
+                },
+                {
+                    event: 'C',
+                    timestamp: 1517594521
+                },
+                {
+                    event: 'A',
+                    timestamp: 1517594525
+                },
+                {
+                    event: 'B',
+                    timestamp: 1517608925
+                }
+            ],
+            cost: 100
+        };
+
+        let history = JSON.parse(JSON.stringify(checkOutInfo.history));
+
+        history.sort(function (x, y) {
+            return x.timestamp - y.timestamp;
+        });
+
+        let msgHead = `<div class="table-wrapper"><table class="alt"><thead><tr> <th>Time</th><th>Event</th> </tr></thead><tbody>`;
+        let msgBody = '';
+        let msgTail = `</tbody></table></div>`;
+
+        history.forEach(function (item) {
+            msgBody += `<tr><td>${moment(item.timestamp, 'X').format('YYYY-MM-DD HH:mm:ss')}</td><td>${item.event}</td></tr>`;
+        });
+
+        let msg = msgHead + msgBody + msgTail;
+
+        msg += `<div class="totPrice"><h4 class="rawInfo">Total Price:</h4>￥ ${checkOutInfo.cost}</div>`;
+
+        BootstrapDialog.show({
+            type: BootstrapDialog.TYPE_DEFAULT,
+            title: 'Usage Detail',
+            message: msg,
+            buttons: [{
+                label: 'Pay and Leave',
+                cssClass: 'dialogBtn',
+                action: function () {
+//                    window.location.href = "http://www.baidu.com";
+                }
+            }, {
+                label: 'Cancel',
+                cssClass: 'dialogBtn',
+                action: function (dialogItself) {
+                    dialogItself.close();
+                }
+            }],
+            closable: false
+        });
+    });
+</script>

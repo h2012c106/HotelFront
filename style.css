@@ -1,0 +1,86 @@
+div.rawInfo {
+    margin-left: 2.5%;
+}
+
+div.rawInfo h1.rawInfo {
+    font-size: 100px;
+    margin: 0;
+}
+
+div.rawInfo p.rawInfoInfo {
+    font-size: 50px;
+    margin: 0;
+}
+
+div.small-gap {
+    margin: 0 2.5% 0 2.5%;
+}
+
+table.ctrlPad {
+    text-align: center;
+}
+
+h3.ctrlName {
+    margin: 5px 0 0 0;
+}
+
+h3.ctrlName#mode {
+    text-transform: capitalize;
+    color: #7f888f;
+    font-family: "Open Sans", sans-serif;
+}
+
+div.fanCtrl {
+    margin-left: 10px;
+}
+
+div.fanCtrl label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800 !important;
+}
+
+span.bootstrap-switch-handle-on {
+    background: #f56a6a !important;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+
+span.bootstrap-switch-handle-off {
+    color: #999999 !important;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+
+#acTempSlider .slider-selection {
+    background: #f5f6f7;
+}
+
+#acTempSlider .slider-handle {
+    background: #f56a6a;
+    cursor: pointer;
+}
+
+.checkout {
+    position: fixed;
+    bottom: 25px;
+    right: 2%;
+}
+
+.checkout a.checkoutBtn {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dialogBtn {
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+div.totPrice{
+    text-align: right;
+    margin-right: 2.5%;
+}
+
+div.totPrice h4.rawInfo {
+    margin: 0;
+}
