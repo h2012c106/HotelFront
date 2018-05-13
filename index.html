@@ -6,9 +6,12 @@
 -->
 <html>
 <head>
-    <title>Editorial by HTML5 UP</title>
+    <title>AC Controller</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <link rel="icon" href="./index.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./index.ico" type="image/x-icon"/>
 
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -292,13 +295,13 @@
 
     let myChart = new Chart(ctx, chartInitParam);
 
-    //        setInterval(function () {
-    //            myChart.data.labels.push(moment().format('HH:mm:ss'));
-    //            myChart.data.datasets.forEach(function (dataset) {
-    //                dataset.data.push(Math.random()*16+16);
-    //            });
-    //            myChart.update();
-    //        }, 1000);
+    setInterval(function () {
+        myChart.data.labels.push(moment().format('HH:mm:ss'));
+        myChart.data.datasets.forEach(function (dataset) {
+            dataset.data.push(Math.random() * 16 + 16);
+        });
+        myChart.update();
+    }, 1000);
 </script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.33.5/css/bootstrap-dialog.css"/>
