@@ -82,7 +82,8 @@ socket.on('connect', function () {
 	setInterval(function () {
 		let info = {
 			type: 1,
-			temperature: $('div#currentTemp h1.rawInfo').text()
+			room: 'HHX',
+			temperature: Number($('div#currentTemp h1.rawInfo').text().replace(/[^0-9\.]+/g, ''))
 		};
 		socket.emit('clientEvent', JSON.stringify(info));
 	}, 1000);
@@ -167,6 +168,12 @@ let eventList = [{
 	timestamp: moment().format('x')
 }];
 
+let fanStrToNum = {
+	'SongFeng': 0,
+	'Normal': 1,
+	'High': 2
+};
+
 function getAcOptions() {
 	let pwd = $('#acPower').data('bootstrap-switch').options.state;
 	let temp = $('#acTemp').bootstrapSlider('getValue');
@@ -174,10 +181,10 @@ function getAcOptions() {
 
 	return {
 		type: 0,
-		room: undefined,
-		switch: pwd,
+		room: 'HHX',
+		switch: pwd ? 1 : 0,
 		temperature: temp,
-		wind: fanSpd
+		wind: fanStrToNum[fanSpd]
 	};
 }
 
