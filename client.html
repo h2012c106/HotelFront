@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>AC Controller</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <link rel="icon" href="./index.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./index.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="lib/css/style.css">
+
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a class="logo">Everything is just purposed to <strong>SUBVERT</strong> the air-conditioning experience</a>
+                <ul class="icons">
+                    <li><a style="cursor:pointer" class="icon fa-twitter" title="Go to Nowhere"><span class="label">Twitter</span></a>
+                    </li>
+                    <li><a style="cursor:pointer" class="icon fa-facebook" title="Go to Nowhere"><span class="label">Facebook</span></a>
+                    </li>
+                    <li><a style="cursor:pointer" class="icon fa-instagram" title="Go to Nowhere"><span class="label">Instagram</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <div class="rawInfo box" align="center">
+                    <div id="cost">
+                        <h1 class="rawInfo"></h1>
+                        <p class="rawInfoInfo">Cost</p>
+                    </div>
+                </div>
+                <div class="rawInfo box" align="center">
+                    <div id="currentTemp">
+                        <h1 class="rawInfo"></h1>
+                        <p class="rawInfoInfo">Temperature</p>
+                    </div>
+                </div>
+
+                <div class="small-gap"></div>
+
+                <table class="ctrlPad">
+                    <tr>
+                        <td>
+                            <h3 class="ctrlName">Power</h3>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="acPower">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="ctrlName">Temperature</h3>
+                        </td>
+                        <td>
+                            <input id="acTemp">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="ctrlName">Fan Speed</h3>
+                        </td>
+                        <td>
+                            <div class="fanCtrl">
+                                <input type="radio" id="demo-priority-low" name="demo-priority" data-gear="Fan" checked>
+                                <label for="demo-priority-low">Fan</label>
+                                <input type="radio" id="demo-priority-normal" name="demo-priority" data-gear="Normal">
+                                <label for="demo-priority-normal">Normal</label>
+                                <input type="radio" id="demo-priority-high" name="demo-priority" data-gear="High">
+                                <label for="demo-priority-high">High</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="ctrlName">Mode</h3>
+                        </td>
+                        <td>
+                            <h3 id="mode" class="ctrlName value"></h3>
+                        </td>
+                    </tr>
+                </table>
+
+            </section>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Statics</h2>
+                </header>
+                <div class="features">
+                    <canvas id="chart"></canvas>
+                </div>
+            </section>
+
+            <div class="checkout">
+                <a class="button checkoutBtn" id="checkoutBtn">
+                    <span class="icon fa-sign-out"></span>
+                    Checkout
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <div class="welcome" align="center">
+                <h1></h1>
+            </div>
+
+            <section>
+                <header class="major">
+                    <h2>About Us</h2>
+                </header>
+                <div align="left">
+                    <p>The section that you are reading is supposed to display some hotel information. But, you know,
+                        this hotel thing does not exist,
+                        <del>and I hope this assignment does not exist as well</del>
+                        , so you have just wasted several minutes to read this piece of shit.
+                        <br><br>
+                        HAVE A NICE DAY.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <header class="major">
+                    <h2>Get in touch</h2>
+                </header>
+                <p>This is my personal number and e-mail to contact. Meaningless but looks like more official.</p>
+                <ul class="contact">
+                    <li class="fa-envelope-o"><a href="#">hanxiang.huang@qq.com</a></li>
+                    <li class="fa-phone">18916887007</li>
+                </ul>
+            </section>
+
+            <footer id="footer">
+                <p class="copyright">&copy; Hanxiang Huang.<br> All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/bootstrap-switch.min.css"/>
+<script src="assets/js/bootstrap-switch.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/bootstrap-slider.css"/>
+<script src="assets/js/bootstrap-slider.js"></script>
+
+<script type="text/javascript" src="lib/js/initial.js"></script>
+
+<script src="assets/js/Chart.js"></script>
+
+<script src="assets/js/moment.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/bootstrap-dialog.css"/>
+<script src="assets/js/bootstrap-dialog.min.js"></script>
+
+<script src="assets/js/socket.io.js"></script>
+
+<script src="assets/js/EventEmitter.min.js"></script>
+
+<script type="text/javascript" src="lib/js/onChange.js"></script>

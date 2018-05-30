@@ -29,7 +29,7 @@ h3.ctrlName {
     margin: 5px 0 0 0;
 }
 
-h3.ctrlName#mode {
+h3.ctrlName.value {
     text-transform: capitalize;
     color: #7f888f;
     font-family: "Open Sans", sans-serif;
@@ -88,4 +88,14 @@ div.totPrice {
 
 div.totPrice h4.rawInfo {
     margin: 0;
+}
+
+ul#roomList li a.roomItem {
+    font-size: 1em;
+}
+
+p.noCanvas{
+    margin: 0;
+    font-size: 8em;
+    color: #adadad;
 }
